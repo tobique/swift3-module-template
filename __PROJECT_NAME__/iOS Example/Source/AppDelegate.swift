@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let frame = UIScreen.main.bounds
+        window = UIWindow(frame: frame)
+
+        let vc = ViewController()
+        let nc = UINavigationController(rootViewController: vc)
+        nc.navigationBar.topItem?.title = "Replace me!"
+
+        window?.rootViewController = UINavigationController(rootViewController: vc)
+        window?.makeKeyAndVisible()
+
         return true
     }
 
